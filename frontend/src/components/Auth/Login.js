@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../../AuthContext"; // Import AuthContext
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const Login = () => {
   const { setUser } = useContext(AuthContext); // Use global auth state
   const [credentials, setCredentials] = useState({
@@ -19,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", credentials);
+      const response = await axios.post(`${apiUrl}/api/auth/login`, credentials);
       const { token, user } = response.data;
 
       // Store in localStorage
