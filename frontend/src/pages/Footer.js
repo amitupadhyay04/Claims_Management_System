@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-light py-4 mt-4">
       <div className="container text-center">
-        <p className="mb-0">All Rights Reserved - Amit Upadhyay, Copyright © 2024</p>
+        <p className="mb-0">All Rights Reserved - Amit Upadhyay, Copyright © 2025</p>
         <ul className="list-inline mt-3">
           <li className="list-inline-item">
             <Link to="#" className="text-dark text-decoration-none">Privacy Policy</Link>
